@@ -64,6 +64,9 @@ python build_image_data.py \
   --data_directory "${ORIGINAL_DATA_DIRECTORY}" \
   --output_directory "${BUCKET}/${JOB_ID}/test_output"
 
+echo "Making bucket: ${BUCKET}"
+gsutil mb ${BUCKET}
+
 gcloud ml-engine jobs submit training "${JOB_ID}" \
   --stream-logs \
   --module-name trainer.task \
