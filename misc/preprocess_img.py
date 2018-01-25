@@ -1,3 +1,4 @@
+import sys
 from os import listdir
 from os.path import isfile, join
 from PIL import Image
@@ -7,7 +8,7 @@ from PIL import Image
 # 3. take the shortest dimension, convert to 64. 
 # 4. save the new image to another location.
 def list_files(input_dir):
-  files = [f for f in listdir(input_dir) if isfile(join(input_dir, f))]
+  files = [f for f in listdir(input_dir) if isfile(join(input_dir, f)) and f != '.DS_Store']
   return files
 
 
@@ -27,13 +28,15 @@ def main():
   input_dir = sys.argv[1]
   output_dir = sys.argv[2]
   file_list = list_files(input_dir)
-  for img_file in flie_list:
+  for img_file in file_list:
     img_dir = input_dir+'/'+img_file
     old_size = get_image_size(img_dir)
     new_size = make_new_size(old_size)
     with Image.open(img_dir) as img:
-        new_img = img.resize(new_size[0], new_size[1], Image.ANTIALIAS)
+        new_img = img.resize(new_size, Image.ANTIALIAS)
         new_img.save(output_dir+'/'+img_file)
 
  
   
+if __name__ == "__main__":
+  main()
