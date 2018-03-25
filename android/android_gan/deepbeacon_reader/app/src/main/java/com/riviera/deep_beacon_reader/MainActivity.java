@@ -66,8 +66,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-
-
                     inferenceInterface = new TensorFlowInferenceInterface(getAssets(), "file:///android_asset/freeze2.pb");
                     int outputSize = (int) inferenceInterface.graph().operation("gen_deconv3/Tanh").output(0).shape().size(3);
                     long[] dims = {1,100};
