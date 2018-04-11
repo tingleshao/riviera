@@ -12,57 +12,51 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/broadcastButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="false"
         android:layout_alignParentRight="false"
         android:layout_centerVertical="false"
         android:layout_marginEnd="17dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="57dp"
         android:layout_marginRight="17dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="200dp"
-        android:text="Button" />
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="250dp"
+        android:text="broadcast" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/decodeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button"
-        android:layout_alignBottom="@+id/button"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="57dp"
-        android:layout_marginStart="57dp"
-        android:text="Button" />
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="130dp"
+        android:text="Decode" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/scanButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button2"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/button2"
-        android:text="Button" />
+        android:layout_marginStart="57dp"
+        android:text="Scan" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/button"
-        android:layout_alignRight="@+id/button"
-        android:layout_alignTop="@+id/button3"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
+        android:layout_marginBottom="16dp"
         android:text="TextView" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/button"
         android:layout_marginLeft="20dp"
+        android:layout_marginStart="57dp"
         android:layout_marginTop="80dp"
         app:srcCompat="@mipmap/ic_launcher" />
 
@@ -70,11 +64,9 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button2"
         android:layout_alignParentTop="false"
-        android:layout_alignStart="@+id/button2"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="80dp"
         app:srcCompat="@mipmap/ic_launcher" />
 
@@ -82,19 +74,26 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button3"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignStart="@+id/imageView2"
         android:layout_marginBottom="30dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="370dp"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <Button
         android:id="@+id/encodeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/button2"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="13dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="130dp"
         android:text="encode" />
+
+    <Button
+        android:id="@+id/cameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="57dp"
+        android:text="camera" />
 
 </RelativeLayout>
